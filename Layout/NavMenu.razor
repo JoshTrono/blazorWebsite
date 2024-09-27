@@ -1,10 +1,22 @@
 ﻿@* NavMenu.razor *@
 
-<nav>
+
     <ul>
-        <li><NavLink href="/" class="nav-item">Home</NavLink></li>
-        <li><NavLink href="/hobbies" class="nav-item">Hobbies</NavLink></li>
-        <li><NavLink href="/Years-Plan" class="nav-item">5 Year Plan</NavLink></li>
+        <li class="nav-item">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                Home
+            </NavLink>
+        </li>
+        <li class="nav-item">
+            <NavLink class="nav-link" href="hobbies">
+                Hobbies
+            </NavLink>
+        </li>
+        <li class="nav-item">
+            <NavLink class="nav-link" href="Years-Plan">
+                5 Year Plan
+            </NavLink>
+        </li>
     </ul>
-</nav>
+
 
