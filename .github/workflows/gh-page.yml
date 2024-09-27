@@ -33,8 +33,8 @@ jobs:
       run: ls dist/Web
 
     # Modify the base href in the index.html for GitHub Pages
-    - name: Update base tag in index.html
-      run: sed -i 's|<base href="/" />|<base href="/joshuatrono/" />|g' dist/Web/wwwroot/index.html
+    #- name: Update base tag in index.html
+   #   run: sed -i 's|<base href="/" />|<base href="/joshuatrono/" />|g' dist/Web/wwwroot/index.html
 
     # Add a .nojekyll file to bypass Jekyll processing on GitHub Pages
     - name: Add .nojekyll file
