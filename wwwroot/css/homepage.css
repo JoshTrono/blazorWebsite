@@ -1,0 +1,89 @@
+/* Base Styles (For Larger Screens) */
+
+
+.image-section {
+    flex: 0 0 auto;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.image-section img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.info-section {
+    flex: 1;
+    overflow: hidden;
+    padding-left: 20px;
+    display: flex;
+}
+
+.scrollable-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.table td {
+    text-align: left;
+}
+
+/* Responsive Styles (For Smaller Screens) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .image-section {
+        max-width: 100%;
+        padding: 10px;
+        order: 1; /* Image will appear on top */
+    }
+
+    .image-section img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .info-section {
+        padding-left: 0;
+        padding-top: 10px;
+        order: 2; /* Content will appear below the image */
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .table th, .table td {
+        padding: 4px;
+    }
+    
+
+    h2 {
+        font-size: 1.5rem; /* Smaller heading for small screens */
+    }
+}

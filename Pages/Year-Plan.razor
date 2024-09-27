@@ -1,0 +1,48 @@
+@page "/Years-Plan"
+
+<section class="section has-background-dark" style="top: 0; left: 0; width: 100%; height: 100%;">
+    <div class="container">
+        <h1 class="title is-3 has-text-centered mb-4">5 Year Plan</h1>
+        <table class="table is-fullwidth">
+            <thead>
+            <tr>
+                <th>Year</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var plan in Plans)
+            {
+                <tr>
+                    <td>@plan.Year</td>
+                    <td>@plan.Description</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</section>
+
+@code {
+    public class Plan
+    {
+        public string Year { get; set; }
+        public string Description { get; set; }
+
+        public Plan(string year, string description)
+        {
+            Year = year;
+            Description = description;
+        }
+    }
+
+    // List of plans
+    private List<Plan> Plans = new List<Plan>
+    {
+        new Plan("August 2022", "Finish my degree ✔"),
+        new Plan("February 2023", "Get a Job in my field and hopefully remote or close to my house ✔"),
+        new Plan("2025", "Travel around"),
+        new Plan("2025", "Be able to fully pay off my car and starting to look for a place to stay"),
+        new Plan("2026", "Be able to afford a house either by renting or mortgage")
+    };
+}

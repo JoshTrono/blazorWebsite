@@ -1,7 +1,119 @@
 ﻿@page "/"
+<link href="css/homepage.css" rel="stylesheet" />
 
-<PageTitle>Home</PageTitle>
+<div class="scrollable-content">
+            <div class="image-section" style="align-items: center">
+                <img src="@Picture" alt="Your Image" />
+            </div>
+            <h2>Joshua Trono</h2>
 
-<h1>Hello, world!</h1>
+            <!-- Education Table -->
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Degree</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var edu in _rows)
+                {
+                    <tr>
+                        <td>@edu.Degree</td>
+                        <td>@edu.Date</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
 
-Welcome to your new app.
+            <!-- Skills Table -->
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Skills</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var skill in _skills)
+                {
+                    <tr>
+                        <td>@skill.SkillName</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+
+            <!-- Experience Table -->
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var exp in _experience)
+                {
+                    <tr>
+                        <td>@exp.Company</td>
+                        <td>@exp.Description</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+
+
+
+@code {
+    private const string Picture = "images/Picture1.jpg"; // Replace with actual image path
+
+    private class Education
+    {
+        public string? Degree { get; set; }
+        public string? Date { get; set; }
+    }
+
+    private List<Education> _rows = new()
+    {
+        new Education { Degree = "Bachelors of Applied Science - Business and Organizational Management - Management Information Systems Specialist", Date = "2020-2022" },
+        new Education { Degree = "Associate in Arts", Date = "2022" },
+        new Education { Degree = "Associate in Science - Computer Information Technology", Date = "2018-2020" },
+    };
+
+    private class Skill
+    {
+        public string? SkillName { get; set; }
+    }
+
+    private readonly List<Skill> _skills = new()
+    {
+        new Skill { SkillName = "Computer Information Technology" },
+        new Skill { SkillName = "Information Tech Analysis" },
+        new Skill { SkillName = "Help Desk Support Technician" },
+        new Skill { SkillName = "Information Tech Support Specialist" },
+        new Skill { SkillName = "Computer Programming Specialist" },
+        new Skill { SkillName = "Network Security" },
+        new Skill { SkillName = "Comptia A+, Network+, Security+" },
+        new Skill { SkillName = "Microsoft Office Specialist" },
+        new Skill { SkillName = "Testout PC Pro, Switching Pro, Networking Pro" },
+        new Skill { SkillName = "Experience with SQL" },
+        new Skill { SkillName = "Basic proficiency in Java, Python, C# programming languages" },
+    };
+
+    private class Experience
+    {
+        public string? Company { get; set; }
+        public string? Description { get; set; }
+    }
+
+    private List<Experience> _experience = new()
+    {
+        new Experience { Company = "Champs Software Inc", Description = "Working as a software developer with Dotnet C# and VB.Net"},
+        new Experience { Company = "Revature Full-Stack Developer", Description = "I got trained with Ruby, Java, HTML, CSS, SQL, React, and Angular. I worked on small projects with each of these technologies." },
+        new Experience { Company = "Beacon Software Solutions", Description = "Assisted with answering phone calls and emails with law enforcement. Worked on SQL to help fix our jail software to work with each individual's client's database." },
+        new Experience { Company = "J-Tay Consulting Software Development", Description = "* Provided project support in software development including program to transfer electronic health records data to standardized forms for physician’s office. * Utilized C#" },
+        new Experience { Company = "Citrus County School Board Help Desk Intern", Description = "* Assisted Information Technology department to update software on teachers' computers and repaired student iPads." },
+        new Experience { Company = "College Of Central Florida", Description = "* Assisted IT students with classwork including Microsoft Office suite, A+ Fundamentals, and Web Programming." },
+    };
+}
