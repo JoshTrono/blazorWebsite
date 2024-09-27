@@ -115,4 +115,135 @@
 
 
 /* /Pages/Hobbies.razor.rz.scp.css */
+/* Container styling */
+.container[b-1hg1xw9g2r] {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Title styling */
+.title[b-1hg1xw9g2r] {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Paragraph styling */
+p[b-1hg1xw9g2r] {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Highlight certain words */
+p span[b-1hg1xw9g2r] {
+    font-weight: bold;
+    color: #4CAF50; /* Green color to stand out */
+}
+
+/* Link Styling if any links in text */
+a[b-1hg1xw9g2r] {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover[b-1hg1xw9g2r] {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container[b-1hg1xw9g2r] {
+        padding: 15px;
+    }
+
+    .title[b-1hg1xw9g2r] {
+        font-size: 2rem;
+    }
+
+    p[b-1hg1xw9g2r] {
+        font-size: 1rem;
+    }
+}
 /* /Pages/Year-Plan.razor.rz.scp.css */
+/* Container styling */
+.container[b-8es7bvhjsu] {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.title[b-8es7bvhjsu] {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+.table[b-8es7bvhjsu] {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table headers */
+.table th[b-8es7bvhjsu] {
+    background-color: #4CAF50;
+    color: white;
+    text-align: left;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Table rows */
+.table td[b-8es7bvhjsu] {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Hover effect for table rows */
+.table tr:hover[b-8es7bvhjsu] {
+    background-color: #f1f1f1;
+}
+
+/* Make the last row border-bottom disappear */
+.table tbody tr:last-child td[b-8es7bvhjsu] {
+    border-bottom: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container[b-8es7bvhjsu] {
+        padding: 15px;
+    }
+
+    .title[b-8es7bvhjsu] {
+        font-size: 1.75rem;
+    }
+
+    .table th[b-8es7bvhjsu], .table td[b-8es7bvhjsu] {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
