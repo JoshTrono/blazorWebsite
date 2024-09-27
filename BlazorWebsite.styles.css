@@ -102,43 +102,17 @@
     margin: 0 15px;
 }
 
-/* Link Styles */
-.top-nav ul li a[b-6n0sedutby] {
-    color: white; /* Default link color */
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    display: block;
-    font-size: 1.2rem;
+
+.nav-item[b-6n0sedutby]  a {
+    color: white;
+    border-radius: 4px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    line-height: 3rem;
 }
 
-/* Active Link Color */
-.top-nav ul li .active[b-6n0sedutby] {
-    color: #ffcc00; /* Change this to your desired active link color */
-}
 
-/* Visited Link Color */
-.top-nav ul li a:visited[b-6n0sedutby] {
-    color: #cccccc; /* Change this to your desired visited link color */
-}
 
-/* Hover Effects */
-.top-nav ul li a:hover[b-6n0sedutby] {
-    background-color: #ddd;
-    color: black;
-    border-radius: 5px;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .top-nav ul[b-6n0sedutby] {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .top-nav ul li[b-6n0sedutby] {
-        margin: 10px 0;
-    }
-}
 /* /Pages/Hobbies.razor.rz.scp.css */
 /* /Pages/Year-Plan.razor.rz.scp.css */
