@@ -102,8 +102,9 @@
     margin: 0 15px;
 }
 
+/* Link Styles */
 .top-nav ul li a[b-6n0sedutby] {
-    color: white;
+    color: white; /* Default link color */
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
@@ -111,6 +112,17 @@
     font-size: 1.2rem;
 }
 
+/* Active Link Color */
+.top-nav ul li .active[b-6n0sedutby] {
+    color: #ffcc00; /* Change this to your desired active link color */
+}
+
+/* Visited Link Color */
+.top-nav ul li a:visited[b-6n0sedutby] {
+    color: #cccccc; /* Change this to your desired visited link color */
+}
+
+/* Hover Effects */
 .top-nav ul li a:hover[b-6n0sedutby] {
     background-color: #ddd;
     color: black;
