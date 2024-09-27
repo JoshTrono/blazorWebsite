@@ -10,34 +10,42 @@ jobs:
     # use ubuntu-latest image to run steps on
     runs-on: ubuntu-latest
     steps:
-    # uses GitHub's checkout action to checkout code form the master branch
-    - uses: actions/checkout@v4
-    
-    # sets up .NET Core SDK 3.1
+    # uses GitHub's checkout action to checkout code form the main branch
+    - uses: actions/checkout@v2
+
+    # sets up .NET Core SDK 7.0.x
     - name: Setup .NET Core SDK
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 8.x.x
 
-    # publishes Blazor project to the release-folder
-    - name: Publish .NET Core Project
-      run: dotnet publish BlazorWebsite.csproj -c Release -o release --nologo
-    
-    # changes the base-tag in index.html from '/' to 'BlazorGitHubPagesDemo' to match GitHub Pages repository subdirectory
-    - name: Change base-tag in index.html from / to BlazorGitHubPagesDemo
-      run: sed -i 's/<base href="\/" \/>/<base href="\/BlazorGitHubPagesDemo\/" \/>/g' release/wwwroot/index.html
-    
-    # copy index.html to 404.html to serve the same file when a file is not found
-    - name: copy index.html to 404.html
-      run: cp release/wwwroot/index.html release/wwwroot/404.html
+     # Install dotnet wasm buildtools workload
+    - name: Install .NET WASM Build Tools
+      run: dotnet workload install wasm-tools
 
-    # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
+      # Publishes Blazor project to the release-folder
+    - name: Publish .NET Core Project
+      run: dotnet publish Portfolio/Portfolio.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
+
+    # changes the base-tag in index.html from '/' to 'WebPortfolio' to match GitHub Pages repository subdirectory
+    - name: Change base-tag in index.html from / to WebPortfolio
+      run: sed -i 's/<base href="\/" \/>/<base href="\/WebPortfolio\/" \/>/g' dist/Web/wwwroot/index.html
+
+
+
+    # Copy index.html to 404.html to serve the same file when a file is not found
+    - name: Copy index.html to 404.html
+      run: cp dist/Web/wwwroot/index.html dist/Web/wwwroot/404.html
+
+    # Add .nojekyll file to tell GitHub Pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
     - name: Add .nojekyll file
-      run: touch release/wwwroot/.nojekyll
-      
+      run: touch dist/Web/wwwroot/.nojekyll
+
+    #Publish static files to Github pages
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: release/wwwroot
+        FOLDER: dist/Web/wwwroot`
+
