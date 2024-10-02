@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script type="text/javascript">
-        // Redirect to root ("/") and preserve the full path as a fragment
-        if (window.location.pathname !== "/") {
-            var newPath = window.location.pathname + window.location.search;
-            window.location.replace("/#" + newPath); // No need for /your-repo-name
-        }
+        // Redirect to index.html and retain the original path as a hash fragment
+        window.location.href = '/' + window.location.pathname + window.location.search;
     </script>
 </head>
 <body>
