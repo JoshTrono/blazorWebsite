@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script type="text/javascript">
-        // Check if the current path isn't index.html, to avoid loops
-        if (window.location.pathname !== "/index.html") {
-            // Redirect to index.html and add the current path as a fragment
-            window.location.replace("#" + window.location.pathname);
+        // Redirect to root ("/") and preserve the current path as a fragment
+        if (window.location.pathname !== "/") {
+            // Use the root URL and add the current path as a fragment to preserve SPA routing
+            window.location.replace("/#" + window.location.pathname);
         }
     </script>
 </head>
