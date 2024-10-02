@@ -1,6 +1,6 @@
 name: Deploy to GitHub Pages
 
-# Trigger the workflow on push to the master branch
+# Trigger the workflow on push to the master branch.
 on:
   push:
     branches: [ master ]
