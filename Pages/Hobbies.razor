@@ -1,17 +1,40 @@
 @page "/Hobbies"
+<link href="css/mainlayout.css" rel="stylesheet" />
 <div class="container">
-    <h1 className="title">My Hobbies</h1>
-    <p>
-        I have some hobbies which include Video-games and learning about technology.
-    </p>
-    <p >
-        I previously used Java but started working with C# and VB.Net since February, 2024. 
-        This Website itself is built using replacing my previous website using React.
-    </p>
-    <p>
-        For Video games, It's typically the co-op games 
-    </p>
+    <h1 class="title is-3 has-text-centered mb-4">My Hobbies</h1>
+    <table class="table is-fullwidth">
+        <thead>
+        <tr>
+            <th>Hobbies</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var hobby in _hobbiesList)
+        {
+            <tr>
+                <td>@hobby.Description</td>
+            </tr>
+        }
+        </tbody>
+    </table>
 </div>
 @code {
+
+    public class Hobby
+    {
+        public string Description { get; }
+
+        public Hobby(string description)
+        {
+            Description = description;
+        }
+    }
     
+    // list of hobbies
+    private readonly List<Hobby> _hobbiesList =
+    [
+        new Hobby("I have some hobbies which include Video-games and learning about technology."),
+        new Hobby("For Video games, It's typically the co-op games")
+    ];
+
 }

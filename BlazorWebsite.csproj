@@ -13,6 +13,10 @@
 
   <ItemGroup>
     <Content Include=".github\workflows\gh-page.yml" />
+    <Content Update="Pages\Home.razor.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
