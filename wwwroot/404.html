@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script type="text/javascript">
-        // Redirect to the root page with the full path preserved as a fragment
-        var target = "/" + window.location.pathname.substring(1) + window.location.search + window.location.hash;
-        window.location.replace("/" + target); // Update "your-repo-name" with your repo name
+        // Redirect to root ("/") and preserve the full path as a fragment
+        if (window.location.pathname !== "/") {
+            var newPath = window.location.pathname + window.location.search;
+            window.location.replace("/#" + newPath); // No need for /your-repo-name
+        }
     </script>
 </head>
 <body>
