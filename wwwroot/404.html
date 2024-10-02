@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script type="text/javascript">
-        // Redirect to root ("/") and preserve the current path as a fragment
+        // Ensure the path gets appended as a fragment to the root URL
         if (window.location.pathname !== "/") {
-            // Use the root URL and add the current path as a fragment to preserve SPA routing
-            window.location.replace("/#" + window.location.pathname);
+            var newPath = window.location.pathname + window.location.search;
+            window.location.replace("/#" + newPath); // Preserve the full path including query parameters
         }
     </script>
 </head>
