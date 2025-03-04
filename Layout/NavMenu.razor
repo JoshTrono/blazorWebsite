@@ -1,8 +1,12 @@
 ﻿@* NavMenu.razor *@
 
+<div class="top-nav">
+    <button @onclick="ToggleMenu" class="menu-button">☰</button>
+    <ul class="nav-menu @(IsMenuOpen ? "open" : "")">
+        <button @onclick="ToggleMenu" class="menu-button">☰</button>
 
-    <ul>
         <li class="nav-item">
+
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 Home
             </NavLink>
@@ -23,5 +27,13 @@
             </NavLink>
         </li>
     </ul>
+</div>
 
+@code {
+    private bool IsMenuOpen = false;
 
+    private void ToggleMenu()
+    {
+        IsMenuOpen = !IsMenuOpen;
+    }
+}
