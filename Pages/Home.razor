@@ -5,63 +5,97 @@
         <h2 style="text-align: center;">Joshua Trono</h2>
         <img src="@Picture" alt="Your Image"/>
     </div>
-
-            <!-- Education Table -->
-            <table class="table">
-                <thead>
+    <div class="scroll-grid">
+        <!-- Education Table -->
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Degree</th>
+                <th>Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var edu in _rows)
+            {
                 <tr>
-                    <th>Degree</th>
-                    <th>Date</th>
+                    <td>@edu.Degree</td>
+                    <td>@edu.Date</td>
                 </tr>
-                </thead>
-                <tbody>
-                @foreach (var edu in _rows)
-                {
-                    <tr>
-                        <td>@edu.Degree</td>
-                        <td>@edu.Date</td>
-                    </tr>
-                }
-                </tbody>
-            </table>
+            }
+            </tbody>
+        </table>
 
-            <!-- Skills Table -->
-            <table class="table">
-                <thead>
+        <!-- Skills Table -->
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Skills</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var skill in _skills)
+            {
                 <tr>
-                    <th>Skills</th>
+                    <td>@skill.SkillName</td>
                 </tr>
-                </thead>
-                <tbody>
-                @foreach (var skill in _skills)
-                {
-                    <tr>
-                        <td>@skill.SkillName</td>
-                    </tr>
-                }
-                </tbody>
-            </table>
+            }
+            </tbody>
+        </table>
 
-            <!-- Experience Table -->
-            <table class="table">
-                <thead>
+        <!-- Experience Table -->
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Company</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var exp in _experience)
+            {
                 <tr>
-                    <th>Company</th>
-                    <th>Description</th>
+                    <td>@exp.Company</td>
+                    <td>@exp.Description</td>
                 </tr>
-                </thead>
-                <tbody>
-                @foreach (var exp in _experience)
-                {
-                    <tr>
-                        <td>@exp.Company</td>
-                        <td>@exp.Description</td>
-                    </tr>
-                }
-                </tbody>
-            </table>
-        </div>
+            }
+            
+            </tbody>
+        </table>
+    </div>
+</div>
+<style>
 
+    @@media (min-width: 1000px)
+    {
+        @@media (max-width: 1300px) {
+            .image-section img {
+                width: 100%;
+            }
+        }
+        .image-section {
+            float: left;
+            margin: 20px;
+        }
+        .scrollable-content {
+            overflow-y: auto;
+        }
+        .image-section img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40vh;
+            margin-bottom: 1em;
+        }
+        .scrollable-content {
+            display: flex;
+        }
+    }
+
+    
+
+
+    
+</style>
 
 
 @code {
