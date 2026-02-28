@@ -18,7 +18,7 @@ jobs:
     - name: Setup .NET Core SDK
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 8.x.x # Adjust if you are using .NET 8 or another version
+        dotnet-version: 10.x.x # Adjust if you are using .NET 10 or another version
 
     # Install the WASM build tools for Blazor
     - name: Install .NET WASM Build Tools
