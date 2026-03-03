@@ -7,22 +7,22 @@
 
         <li class="nav-item">
 
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All" @onclick="ButtonPressed">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 Home
             </NavLink>
         </li>
         <li class="nav-item">
-            <NavLink class="nav-link" href="hobbies" @onclick="ButtonPressed">
+            <NavLink class="nav-link" href="hobbies">
                 Hobbies
             </NavLink>
         </li>
         <li class="nav-item">
-            <NavLink class="nav-link" href="Years-Plan" @onclick="ButtonPressed">
+            <NavLink class="nav-link" href="Years-Plan">
                 5 Year Plan
             </NavLink>
         </li>
         <li class="nav-item">
-            <NavLink class="nav-link" href="Resume" @onclick="ButtonPressed">
+            <NavLink class="nav-link" href="Resume">
                 Resume
             </NavLink>
         </li>
@@ -32,12 +32,6 @@
 @code {
     private bool IsMenuOpen = false;
 
-    private void ButtonPressed()
-    {
-        if (IsMenuOpen)
-            IsMenuOpen = !IsMenuOpen;
-    }
-    
     private void ToggleMenu()
     {
         IsMenuOpen = !IsMenuOpen;
