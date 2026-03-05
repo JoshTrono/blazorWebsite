@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="razorWebsite/BlazorWebsite.csproj" />
+  <Project Path="Website/Website.csproj" />
+</Solution>
