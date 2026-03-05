@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/src/">
+    <File Path=".github\workflows\gh-page.yml" />
+  </Folder>
   <Project Path="razorWebsite/BlazorWebsite.csproj" />
   <Project Path="Website/Website.csproj" />
 </Solution>

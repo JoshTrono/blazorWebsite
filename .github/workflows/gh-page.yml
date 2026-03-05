@@ -26,7 +26,7 @@ jobs:
 
     # Publish the Blazor app
     - name: Publish Blazor App
-      run: dotnet publish BlazorWebsite.csproj -c Release -o dist/Web --nologo
+      run: dotnet publish ./BlazorWebsite/BlazorWebsite.csproj -c Release -o dist/Web --nologo
 
     # Check if the files are published correctly
     - name: Check published files
