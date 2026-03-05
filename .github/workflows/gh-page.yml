@@ -9,9 +9,9 @@ jobs:
   deploy-to-github-pages:
     # Use ubuntu-latest as the environment for steps
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: razorWebsite
+#    defaults:
+#      run:
+#        working-directory: razorWebsite
 
     steps:
     # Checkout the repository code
