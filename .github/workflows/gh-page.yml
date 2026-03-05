@@ -16,6 +16,8 @@ jobs:
     steps:
     # Checkout the repository code
     - uses: actions/checkout@v2
+      with:
+        path: razorWebsite
 
     # Set up the .NET Core SDK (Ensure the correct version is used here)
     - name: Setup .NET Core SDK
