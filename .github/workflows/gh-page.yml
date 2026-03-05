@@ -9,6 +9,9 @@ jobs:
   deploy-to-github-pages:
     # Use ubuntu-latest as the environment for steps
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: razorWebsite
 
     steps:
     # Checkout the repository code
@@ -26,7 +29,8 @@ jobs:
 
     # Publish the Blazor app
     - name: Publish Blazor App
-      run: cd razorWebsite && dotnet publish BlazorWebsite.csproj -c Release -o dist/Web --nologo
+      run: |
+        dotnet publish BlazorWebsite.csproj -c Release -o dist/Web --nologo
 
     # Check if the files are published correctly
     - name: Check published files
@@ -38,8 +42,10 @@ jobs:
 
     # Add a .nojekyll file to bypass Jekyll processing on GitHub Pages
     - name: Add .nojekyll file
-      run: touch dist/Web/wwwroot/.nojekyll
-
+      run: |
+        touch dist/Web/wwwroot/.nojekyll
+      
+      
     # Deploy the published Blazor app to GitHub Pages
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.7.1
