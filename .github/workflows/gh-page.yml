@@ -9,15 +9,13 @@ jobs:
   deploy-to-github-pages:
     # Use ubuntu-latest as the environment for steps
     runs-on: ubuntu-latest
-#    defaults:
-#      run:
-#        working-directory: razorWebsite
+    defaults:
+      run:
+        working-directory: razorWebsite
 
     steps:
     # Checkout the repository code
     - uses: actions/checkout@v2
-      with:
-        path: razorWebsite
 
     # Set up the .NET Core SDK (Ensure the correct version is used here)
     - name: Setup .NET Core SDK
@@ -32,11 +30,11 @@ jobs:
     # Publish the Blazor app
     - name: Publish Blazor App
       run: |
-        dotnet publish BlazorWebsite.csproj -c Release -o dist/Web --nologo
+        dotnet publish BlazorWebsite.csproj -c Release -o ${{ github.workspace }}/dist/Web --nologo
 
     # Check if the files are published correctly
     - name: Check published files
-      run: ls dist/Web
+      run: ls ${{ github.workspace }}/dist/Web
 
     # Modify the base href in the index.html for GitHub Pages
     #- name: Update base tag in index.html
@@ -45,7 +43,7 @@ jobs:
     # Add a .nojekyll file to bypass Jekyll processing on GitHub Pages
     - name: Add .nojekyll file
       run: |
-        touch dist/Web/wwwroot/.nojekyll
+        touch ${{ github.workspace }}/dist/Web/wwwroot/.nojekyll
       
       
     # Deploy the published Blazor app to GitHub Pages
