@@ -1,8 +1,91 @@
-﻿@{
+﻿@using Website.Controllers
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <div class="row">
+        <!-- Image Section -->
+        <div class="col-md-6 fixed-image-section">
+            <img src="@HomeController.Picture" alt="Your Image" class="parallax" style="width: 100%; height: auto;">
+            <div class="grid">
+                <div class="grid-item">
+                    <table class="table">
+                        @foreach (var exp in HomeController._experience)
+                        {
+                            <tr>
+                                <td>@exp.Company</td>
+                                <td>@exp.Description</td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+                
+                <div class="grid">
+                    <div class="grid-item">
+                        <table class="table">
+                            @foreach (var skill in HomeController._skills)
+                            {
+                                <tr>
+                                    <td>@skill.SkillName</td>
+                                </tr>
+                            }
+                        </table>
+                    </div>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid Section -->
+        <div class="col-md-6 scrollable-content-section">
+                
+                
+            
+            <div class="grid">
+                <div class="grid-item">
+                    <table class="table">
+                        @foreach (var skill in HomeController._skills)
+                        {
+                            <tr>
+                                <td>@skill.SkillName</td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+                
+                
+            </div>
+            <div class="grid">
+                <div class="grid-item">
+                    <table class="table">
+                        @foreach (var skill in HomeController._skills)
+                        {
+                            <tr>
+                                <td>@skill.SkillName</td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+                
+                
+            </div>
+            <div class="grid">
+                <div class="grid-item">
+                    <table class="table">
+                        @foreach (var skill in HomeController._skills)
+                        {
+                            <tr>
+                                <td>@skill.SkillName</td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
 </div>
