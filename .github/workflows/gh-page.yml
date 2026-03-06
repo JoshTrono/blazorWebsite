@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: Website
+        working-directory: razorWebsite
 
     steps:
     # Checkout the repository code
@@ -22,21 +22,18 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 10.x.x # Adjust if you are using .NET 10 or another version
-      
-      # Install ASPNetStatic
-    - name: Install ASPNetStatic
-      run: dotnet tool restore
-      
-      # Build your ASP.NET Core app
-    - name: Build app
-      run: dotnet build Website.csproj -c Release
-      
-      # Generate static files
-    - name: Generate Static Site
-      run: dotnet tool run aspnetstatic -p Website.csproj -o ${{ github.workspace }}/dist/Web
-      
-      # Check generated files
-    - name: List Static Files
+
+    # Install the WASM build tools for Blazor
+    - name: Install .NET WASM Build Tools
+      run: dotnet workload install wasm-tools
+
+    # Publish the Blazor app
+    - name: Publish Blazor App
+      run: |
+        dotnet publish BlazorWebsite.csproj -c Release -o ${{ github.workspace }}/dist/Web --nologo
+
+    # Check if the files are published correctly
+    - name: Check published files
       run: ls ${{ github.workspace }}/dist/Web
 
     # Modify the base href in the index.html for GitHub Pages

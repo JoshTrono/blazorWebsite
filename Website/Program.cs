@@ -1,4 +1,3 @@
-using AspNetStatic;
 
 var builder = WebApplication.CreateBuilder(args);
 
