@@ -1,13 +1,13 @@
 self.assetsManifest = {
-  "version": "6b6maK6h",
+  "version": "b0o+Sbz6",
   "assets": [
     {
       "hash": "sha256-G6pEUyKvufDAzZCQT9v7Kq56+DhLuMZuKtYtBmXbq/E=",
       "url": "BlazorAppWebsite.styles.css"
     },
     {
-      "hash": "sha256-6jFL9shtAdMFt4IxJf8pUrP9MCZocgheuuhcb2wMppM=",
-      "url": "_framework/BlazorAppWebsite.qcudf6hw9k.wasm"
+      "hash": "sha256-N1v5CXo4QPwTMqAHfGAC2wSrtWRC/9j6f8PHM1YqVus=",
+      "url": "_framework/BlazorAppWebsite.zl6j7v31jw.wasm"
     },
     {
       "hash": "sha256-FLi+ftEDyXkk3AEc12BWU4CxzgvkshpiE6Olt8nBOlA=",
@@ -158,8 +158,8 @@ self.assetsManifest = {
       "url": "_framework/dotnet.runtime.q5rqv3xrhm.js"
     },
     {
-      "hash": "sha256-lhazQL9hStA28QggZ5TNpQfMyxRHxNWrSKMigOZ/Wt4=",
-      "url": "_framework/dotnet.y9f1bq8cc5.js"
+      "hash": "sha256-wSyTtAeXLHg4JQdEWA+zSUNK4ot1jEixsnHYoWnhhm8=",
+      "url": "_framework/dotnet.xkdk7lpt4a.js"
     },
     {
       "hash": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -198,7 +198,7 @@ self.assetsManifest = {
       "url": "images/Resume.docx"
     },
     {
-      "hash": "sha256-TSwQJ+kzP0bQhtU62karczssHm0zHbK5BwAAoiPWEds=",
+      "hash": "sha256-UFqPBuffqzElroMR5O/kIYSNxbXPhhisDxPS94WDPvc=",
       "url": "index.html"
     },
     {
