@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: razorWebsite
+        working-directory: BlazorAppWebsite
 
     steps:
     # Checkout the repository code
@@ -30,7 +30,7 @@ jobs:
     # Publish the Blazor app
     - name: Publish Blazor App
       run: |
-        dotnet publish BlazorWebsite.csproj -c Release -o ${{ github.workspace }}/dist/Web --nologo
+        dotnet publish BlazorAppWebsite.csproj -c Release -o ${{ github.workspace }}/dist/Web --nologo
 
     # Check if the files are published correctly
     - name: Check published files
