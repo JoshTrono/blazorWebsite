@@ -3,66 +3,70 @@
     <div class="row">
         <!-- Left Column: Heading + Image -->
         <div class="col-12 col-lg-4 text-center mb-4 mb-lg-0">
-            <h2 class="mb-2 mb">Joshua Trono</h2>
+            @* <h2 class="mb-2 mb">Joshua Trono</h2> *@
             <img class="img-fluid s" src="@Picture" alt="Your Image" />
         </div>
 
         <!-- Right Column: Tables -->
         <div class="col-12 col-lg-8">
+            
+            <!-- Experience Table -->
+            <table class="table table-striped table-hover table-bordered">
+                <thead class="table-dark">
+                <tr>
+                    <th>Company</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var exp in _experience)
+                {
+                    <tr>
+                        <td>@exp.Company</td>
+                        <td>@exp.Description</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+            
+            
             <!-- Education Table -->
             <table class="table table-striped table-hover table-bordered">
                 <thead class="table-dark">
-                    <tr>
-                        <th>Degree</th>
-                        <th>Date</th>
-                    </tr>
+                <tr>
+                    <th>Degree</th>
+                    <th>Date</th>
+                </tr>
                 </thead>
                 <tbody>
-                    @foreach (var edu in _rows)
-                    {
-                        <tr>
-                            <td>@edu.Degree</td>
-                            <td class="text-nowrap">@edu.Date</td>
-                        </tr>
-                    }
+                @foreach (var edu in _rows)
+                {
+                    <tr>
+                        <td>@edu.Degree</td>
+                        <td class="text-nowrap">@edu.Date</td>
+                    </tr>
+                }
                 </tbody>
             </table>
 
             <!-- Skills Table -->
             <table class="table table-striped table-hover table-bordered">
                 <thead class="table-dark">
-                    <tr>
-                        <th>Skills</th>
-                    </tr>
+                <tr>
+                    <th>Skills</th>
+                </tr>
                 </thead>
                 <tbody>
-                    @foreach (var skill in _skills)
-                    {
-                        <tr>
-                            <td>@skill.SkillName</td>
-                        </tr>
-                    }
+                @foreach (var skill in _skills)
+                {
+                    <tr>
+                        <td>@skill.SkillName</td>
+                    </tr>
+                }
                 </tbody>
             </table>
 
-            <!-- Experience Table -->
-            <table class="table table-striped table-hover table-bordered">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Company</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var exp in _experience)
-                    {
-                        <tr>
-                            <td>@exp.Company</td>
-                            <td>@exp.Description</td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+
         </div>
     </div>
 </div>

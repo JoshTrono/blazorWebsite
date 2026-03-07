@@ -4,5 +4,4 @@
   </Folder>
   <Project Path="BlazorAppWebsite/BlazorAppWebsite.csproj" />
   <Project Path="razorWebsite/BlazorWebsite.csproj" />
-  <Project Path="Website/Website.csproj" />
 </Solution>
