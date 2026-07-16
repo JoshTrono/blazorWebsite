@@ -1,109 +1,119 @@
 ﻿@page "/"
-<div class="container my-5">
-    <div class="row">
-        <!-- Left Column: Heading + Image -->
-        <div class="col-12 col-lg-4 text-center mb-4 mb-lg-0">
-            @* <h2 class="mb-2 mb">Joshua Trono</h2> *@
-            <img class="img-fluid s" src="@Picture" alt="Your Image" />
+
+<div class="portfolio">
+
+    <!-- Profile -->
+    <section class="profile-card">
+
+        <img src="@Picture" class="profile-image" alt="Joshua Trono" />
+
+        <div class="profile-info">
+            <h1>Joshua Trono</h1>
+
+            <h3>Software Developer</h3>
+
+            <p>
+                Software developer specializing in .NET, C#, Linux, Blazor,
+                SQL, and modern application development.
+                Passionate about open source, automation, and creating
+                maintainable software solutions.
+            </p>
         </div>
 
-        <!-- Right Column: Tables -->
-        <div class="col-12 col-lg-8">
-            
-            <!-- Experience Table -->
-            <table class="table table-striped table-hover table-bordered">
-                <thead class="table-dark">
-                <tr>
-                    <th>Company</th>
-                    <th>Description</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach (var exp in _experience)
-                {
-                    <tr>
-                        <td>@exp.Company</td>
-                        <td>@exp.Description</td>
-                    </tr>
-                }
-                </tbody>
-            </table>
-            
-            
-            <!-- Education Table -->
-            <table class="table table-striped table-hover table-bordered">
-                <thead class="table-dark">
-                <tr>
-                    <th>Degree</th>
-                    <th>Date</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach (var edu in _rows)
-                {
-                    <tr>
-                        <td>@edu.Degree</td>
-                        <td class="text-nowrap">@edu.Date</td>
-                    </tr>
-                }
-                </tbody>
-            </table>
+    </section>
 
-            <!-- Skills Table -->
-            <table class="table table-striped table-hover table-bordered">
-                <thead class="table-dark">
-                <tr>
-                    <th>Skills</th>
-                </tr>
-                </thead>
-                <tbody>
+    <!-- Main Content -->
+    <section class="content-grid">
+
+        <!-- Experience -->
+        <div class="card">
+
+            <h2>💼 Experience</h2>
+
+            <div class="table-wrapper">
+
+                <table class="table modern-table">
+
+                    <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    @foreach (var exp in _experience)
+                    {
+                        <tr>
+                            <td>@exp.Company</td>
+                            <td>@exp.Description</td>
+                        </tr>
+                    }
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- Education -->
+        <div class="card">
+
+            <h2>🎓 Education</h2>
+
+            <div class="table-wrapper">
+
+                <table class="table modern-table">
+
+                    <thead>
+                    <tr>
+                        <th>Degree</th>
+                        <th>Year</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    @foreach (var edu in _rows)
+                    {
+                        <tr>
+                            <td>@edu.Degree</td>
+                            <td>@edu.Date</td>
+                        </tr>
+                    }
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- Skills -->
+        <div class="card full-width">
+
+            <h2>⚡ Skills</h2>
+
+            <div class="skills">
+
                 @foreach (var skill in _skills)
                 {
-                    <tr>
-                        <td>@skill.SkillName</td>
-                    </tr>
+                    <span class="skill-pill">
+                        @skill.SkillName
+                    </span>
                 }
-                </tbody>
-            </table>
 
+            </div>
 
         </div>
-    </div>
+
+    </section>
+
 </div>
-<style>
-
-    @@media (min-width: 1000px)
-    {
-        @@media (max-width: 1300px) {
-            .image-section img {
-                width: 100%;
-                align-self: center;
-            }
-        }
-        .image-section {
-            float: left;
-            margin: 20px;
-        }
-        .scrollable-content {
-            overflow-y: auto;
-        }
-        .image-section img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 40vh;
-            margin-bottom: 1em;
-        }
-        .scrollable-content {
-            display: flex;
-        }
-    }
-
-    
-
-
-    
-</style>
 
 
 @code {

@@ -3,5 +3,4 @@
     <File Path=".github\workflows\gh-page.yml" />
   </Folder>
   <Project Path="BlazorAppWebsite/BlazorAppWebsite.csproj" />
-  <Project Path="razorWebsite/BlazorWebsite.csproj" />
 </Solution>
