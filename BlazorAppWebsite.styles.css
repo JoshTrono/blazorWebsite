@@ -262,7 +262,7 @@ body[b-fwhcab4o9n] {
     gap: 2rem;
 
     grid-template-columns:
-        repeat(auto-fit,minmax(450px,1fr));
+        repeat(auto-fit,minmax(700px,2fr));
 
 }
 
