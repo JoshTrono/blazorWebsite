@@ -113,3 +113,15 @@ code {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+
+.project-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+}
