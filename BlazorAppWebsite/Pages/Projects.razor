@@ -1,0 +1,31 @@
+@page "/projects"
+
+<PageTitle>Projects</PageTitle>
+
+<h1>Projects</h1>
+
+<div class="project-grid">
+    @foreach (var p in projects)
+    {
+        <div class="project-card">
+            <h3>@p.Title</h3>
+            <p>@p.Description</p>
+            <NavLink class="btn btn-primary" href="@p.Url">@p.LinkText</NavLink>
+        </div>
+    }
+</div>
+
+@code {
+    private record Project(string Title, string Description, string Url, string LinkText = "View project");
+
+    private readonly List<Project> projects = new()
+    {
+        new("Flappy Bird",
+            "A Flappy Bird clone I built in Python with pygame for a college assignment, compiled to the web with pygbag. ",
+            "projects/flappy",
+            "Play"),
+
+        // Add more projects here:
+        // new("Project name", "Short description.", "projects/your-page"),
+    };
+}
