@@ -1,13 +1,13 @@
 self.assetsManifest = {
-  "version": "N1gD76W1",
+  "version": "Z1Wqbm/0",
   "assets": [
     {
       "hash": "sha256-NvN6+LzdpWlVHwJDQCIDZeWWvEFHl6F999v1pcSIw04=",
       "url": "BlazorAppWebsite.styles.css"
     },
     {
-      "hash": "sha256-pbuBD06fy7k21BQtw4KvbRCpl/qOJ37Q+9RykzAEndY=",
-      "url": "_framework/BlazorAppWebsite.50a0tfrous.wasm"
+      "hash": "sha256-mwSVrxBngi5fJgn+F/TCSpu8SSP4rLjwbv+r5qVpI9o=",
+      "url": "_framework/BlazorAppWebsite.3an30j4shn.wasm"
     },
     {
       "hash": "sha256-Fd/gOeRE92FZZb6QlJjPFx+TTjaKAoDq4VyfGs3Xj7g=",
@@ -146,10 +146,6 @@ self.assetsManifest = {
       "url": "_framework/blazor.webassembly.w3qd1tpl0e.js"
     },
     {
-      "hash": "sha256-rzftjVAsKQ+VJvmBtC8j81fQPJlj5YhITRG9BsecMQk=",
-      "url": "_framework/dotnet.lvqdv8eubw.js"
-    },
-    {
       "hash": "sha256-0TgR9GGYk9SNJQlfC8QZmwDcThFadC84fTEFE5nmTT4=",
       "url": "_framework/dotnet.native.jjn4virnj8.wasm"
     },
@@ -160,6 +156,10 @@ self.assetsManifest = {
     {
       "hash": "sha256-/3dBg9sj1yLD3h0PDMHnNUXWs/2zWwIMEzom1Xz3Q40=",
       "url": "_framework/dotnet.runtime.5nc8i5dl74.js"
+    },
+    {
+      "hash": "sha256-3f4nRnUUxizRjeSzvoX3/BmyT0YgGdcuIP0rQqyOTdU=",
+      "url": "_framework/dotnet.z8melxwh0w.js"
     },
     {
       "hash": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -190,6 +190,10 @@ self.assetsManifest = {
       "url": "games/flappy/flappy.apk"
     },
     {
+      "hash": "sha256-Qq2I1TzID9Tg8bEfFhFEkPlqZVIj7/XNMmxFKa+1sTs=",
+      "url": "games/flappy/flappy.tar.gz"
+    },
+    {
       "hash": "sha256-5zlBFiF4TD+octQVIJfWES9yN+j7DOf4V8EI+3v6Vq8=",
       "url": "games/flappy/index.html"
     },
@@ -214,7 +218,7 @@ self.assetsManifest = {
       "url": "images/Resume.pdf"
     },
     {
-      "hash": "sha256-6PtJLtmvIbxXxDm5P/oecLrbFecjjjqQcyI9PWQQN5I=",
+      "hash": "sha256-5kkxgssyaNP8VCWyUSSy6GJszJ54jdOQotOjD9ft4CA=",
       "url": "index.html"
     },
     {
